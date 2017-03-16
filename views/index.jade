@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div#editor
+
+  script.
+      $(function() {
+        $('#editor').summernote({
+          height: 300,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear' ]],
+            ['color', ['color']],
+            ['fontsize', ['fontsize']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],
+            ['table', ['table']],
+            ['media', ['picture', 'video']],
+            ['link', ['link']],
+            ['fullscreen', ['fullscreen']],
+            ['codeview', ['codeview']]
+          ],
+          codemirror: { // codemirror options
+            theme: 'monokai'
+          }
+        });
+      });
